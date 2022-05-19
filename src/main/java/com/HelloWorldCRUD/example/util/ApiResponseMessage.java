@@ -58,20 +58,20 @@ public class ApiResponseMessage {
     }
 
     public String path_variable_error(String path){
-        return path+" "+HTTP_400_PATH_VARIABLE_ERROR+"occurred.";
+        return path+" "+HTTP_400_PATH_VARIABLE_ERROR+" occurred.";
     }
 
     public String field_error(String field_name){
-        return field_name+" "+HTTP_400_FIELD_ERROR+"occurred.";
+        return field_name+" "+HTTP_400_FIELD_ERROR+" occurred.";
     }
 
     public String method_error(String method_name){
-        return method_name+" "+HTTP_400_METHOD_ERROR+"occurred.";
+        return method_name+" "+HTTP_400_METHOD_ERROR+" occurred.";
     }
     public String validation_error(String class_name){
-        return class_name+" "+HTTP_400_VALIDATION_ERROR+"occurred.";
+        return class_name+" "+HTTP_400_VALIDATION_ERROR+" occurred.";
     }
-    public String entity_validation_error(String class_name){ return class_name+" "+HTTP_400_ENTITY_VALIDATION_ERROR+"occurred.";}
+    public String entity_validation_error(String class_name){ return class_name+" "+HTTP_400_ENTITY_VALIDATION_ERROR+" occurred.";}
     public String activated(String class_name){
         return class_name+" "+HTTP_200_ACTIVATION+".";
     }
