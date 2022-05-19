@@ -20,8 +20,8 @@ public class DistrictConverter {
     DistrictDto districtDto;
 
     public District DistrictDtoToEntity(DistrictDto dto){
-        district = new District();
         if(dto == null) return null;
+        district = new District();
         if(dto.getName() != null) district.setName(dto.getName());
         if(dto.getCode() > 0 && dto.getCode()< 65) district.setDist_code(dto.getCode());
         if(dto.getDivision() != null) district.setDivision(dto.getDivision());
@@ -29,12 +29,13 @@ public class DistrictConverter {
     }
 
     public List<District> DistrictDtoToEntity(List<DistrictDto> dtos){
+        if(dtos.isEmpty()) return null;
         return dtos.stream().map(districtDto -> DistrictDtoToEntity(districtDto)).collect(Collectors.toList());
     }
 
     public DistrictDto DistrictEntityToDto(District district){
-        DistrictDto districtDto = new DistrictDto();
         if(district == null) return null;
+        DistrictDto districtDto = new DistrictDto();
         if(district.getName() != null) districtDto.setName(district.getName());
         if(district.getDist_code() > 0 && district.getDist_code()< 65) districtDto.setCode(district.getDist_code());
         if(district.getDivision() != null) districtDto.setDivision(district.getDivision());
@@ -42,6 +43,7 @@ public class DistrictConverter {
     }
 
     public List<DistrictDto> DistrictEntityToDto(List<District> districts){
+        if(districts.isEmpty()) return null;
         return districts.stream().map(district -> DistrictEntityToDto(district)).collect(Collectors.toList());
     }
 }

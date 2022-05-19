@@ -20,6 +20,7 @@ public class UserConverter {
     }
 
     public List<UserDto> UserEntityToDTO(List<User> users) {
+        if(users==null) return null;
         return users.stream().map(user -> UserEntityToDTO(user)).collect(Collectors.toList());
     }
 
@@ -33,6 +34,7 @@ public class UserConverter {
     }
 
     public List<User> UserDtoToEntity(List<UserDto> dtos) {
+        if(dtos.isEmpty()) return null;
         return dtos.stream().map(dto -> UserDtoToEntity(dto)).collect(Collectors.toList());
     }
 }
