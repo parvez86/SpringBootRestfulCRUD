@@ -64,6 +64,7 @@ public class UserController {
 
     @GetMapping("/users/email")
     public ResponseEntity<ApiResponse> getUserByEmail(@RequestParam String email){
+        System.out.println(email);
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserByEmail(email)), responseMessage.successfully_found("users"), responseMessage.not_found("users"));
     }
 
@@ -89,8 +90,8 @@ public class UserController {
     }
 
     @PutMapping("/users/deactivate/{id}")
-    public ResponseEntity<ApiResponse> deactivateUser(@PathVariable("id") long id){
-        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deactivateUser(id)), responseMessage.activated("user"), "user");
+    public ResponseEntity<ApiResponse> deactivateUser( @PathVariable("id") long id){
+        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deactivateUser(id)), responseMessage.activated("users"), responseMessage.not_activated("users"));
     }
 
     @GetMapping("users/active/")

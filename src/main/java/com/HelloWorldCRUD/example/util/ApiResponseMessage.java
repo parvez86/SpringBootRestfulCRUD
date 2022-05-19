@@ -9,13 +9,13 @@ public class ApiResponseMessage {
     private final String HTTP_200_CREATED = "successfully created";
     private final String HTTP_200_UPDATED = "successfully updated";
     private final String HTTP_200_DELETED = "successfully deleted";
-    private final String HTTP_200_ACTIVATION = "successfully activated";
+    private final String HTTP_200_DEACTIVATION = "successfully deactivated";
 
     private final String HTTP_400_NOT_FOUND = "not found";
     private final String HTTP_400_NOT_CREATED = "not created";
     private final String HTTP_400_NOT_UPDATED = "not updated";
     private final String HTTP_400_NOT_DELETED = "not deleted";
-    private final String HTTP_400_ACTIVATION= "not activated";
+    private final String HTTP_400_DEACTIVATION= "not deactivated";
 
     private final String HTTP_400_PATH_VARIABLE_ERROR = "path variable error";
     private final String HTTP_400_FIELD_ERROR = "field error";
@@ -73,9 +73,9 @@ public class ApiResponseMessage {
     }
     public String entity_validation_error(String class_name){ return class_name+" "+HTTP_400_ENTITY_VALIDATION_ERROR+" occurred.";}
     public String activated(String class_name){
-        return class_name+" "+HTTP_200_ACTIVATION+".";
+        return class_name+" "+HTTP_200_DEACTIVATION+".";
     }
     public String not_activated(String class_name){
-        return class_name+" "+HTTP_400_ACTIVATION+".";
+        return class_name+" "+HTTP_400_DEACTIVATION+".";
     }
 }

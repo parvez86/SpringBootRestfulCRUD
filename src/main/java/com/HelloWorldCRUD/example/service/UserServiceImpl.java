@@ -20,15 +20,14 @@ public class UserServiceImpl implements UserService{
 
     public User saveUser(User user){
         User new_user = new User();
-        if(Objects.isNull(repository.findByEmail(user.getEmail())) ) {
-            if (user.getId() > 0 ) new_user.setId(user.getId());
-            if (user.getFirstName() != null) new_user.setFirstName(user.getFirstName());
-            if (user.getLastName() != null) new_user.setLastName(user.getLastName());
-            if (user.getEmail() != null) new_user.setEmail(user.getEmail());
-            if (user.getMobileNo() != null) new_user.setMobileNo(user.getMobileNo());
-            return repository.save(new_user);
-        } else return null;
-
+        if(user==null || Objects.nonNull(repository.findByEmail(user.getEmail()))) return null;
+        if (user.getId() > 0 ) new_user.setId(user.getId());
+        if (user.getFirstName() != null) new_user.setFirstName(user.getFirstName());
+        if (user.getLastName() != null) new_user.setLastName(user.getLastName());
+        if (user.getEmail() != null) new_user.setEmail(user.getEmail());
+        if (user.getMobileNo() != null) new_user.setMobileNo(user.getMobileNo());
+        new_user.setIsActive(true);
+        return repository.save(new_user);
     }
 
     public List<User> saveUsers(List<User> users){
@@ -38,8 +37,8 @@ public class UserServiceImpl implements UserService{
     }
 
     public List<User> getUsers(){
-        return repository.findAll(Sort.by(Sort.Direction.ASC, "firstName"));
-       // return repository.findAll();
+        List<User> users = repository.findAll(Sort.by(Sort.Direction.ASC, "firstName"));
+        return (users.isEmpty())?null:users;
     }
 
     public User getUserById(long id){
@@ -48,16 +47,17 @@ public class UserServiceImpl implements UserService{
 
     public List<User> getUserByFirstName(String fname){
         List<User> users = repository.findByFirstName(fname);
-        return (users.size()==0)?null:users;
+        System.out.println(users);
+        return (users.isEmpty())?null:users;
     }
 //
     public List<User> getUserByLastName(String lname){
         List<User> users = repository.findByLastName(lname);
-        return (users.size()==0)?null:users;
+        return (users.isEmpty())?null:users;
     }
 
-    public User getUserByEmail(String name){
-        return repository.findByEmail(name);
+    public User getUserByEmail(String email){
+        return repository.findByEmail(email);
     }
 
     @Override
@@ -84,15 +84,15 @@ public class UserServiceImpl implements UserService{
 
     public User deactivateUser(long id) {
         User user = repository.findById(id).orElse(null);
-        if(user != null){
-            /*user.setIsActive(false);*/
-            repository.save(user);
-        }
+        if(Objects.isNull(user)) return null;
+        user.setIsActive(false);
+        repository.save(user);
         return user;
     }
 
     @Override
     public List<User> getActiveUsers() {
-        return repository.findByIsActiveTrue();
+        List<User> users = repository.findByIsActiveTrue();
+        return (users.isEmpty())?null:users;
     }
 }
