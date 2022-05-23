@@ -47,7 +47,6 @@ public class UserServiceImpl implements UserService{
 
     public List<User> getUserByFirstName(String fname){
         List<User> users = repository.findByFirstName(fname);
-        System.out.println(users);
         return (users.isEmpty())?null:users;
     }
 //
