@@ -1,7 +1,6 @@
 package com.HelloWorldCRUD.example.util;
 
 import com.HelloWorldCRUD.example.entity.HttpStatus;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

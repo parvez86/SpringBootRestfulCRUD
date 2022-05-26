@@ -4,9 +4,6 @@ package com.HelloWorldCRUD.example.controller;
 import com.HelloWorldCRUD.example.converter.ApiResponseConverter;
 import com.HelloWorldCRUD.example.converter.DistrictConverter;
 import com.HelloWorldCRUD.example.dto.DistrictDto;
-import com.HelloWorldCRUD.example.entity.District;
-import com.HelloWorldCRUD.example.entity.HttpStatus;
-import com.HelloWorldCRUD.example.repository.DistrictRepository;
 import com.HelloWorldCRUD.example.service.DistrictServiceImpl;
 import com.HelloWorldCRUD.example.util.ApiResponse;
 import com.HelloWorldCRUD.example.util.ApiResponseMessage;
@@ -15,16 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
 public class DistrictController {
-    @Autowired
-    private District district;
-
-    @Autowired
-    private DistrictRepository repository;
-
     @Autowired
     private DistrictServiceImpl service;
 
@@ -44,7 +34,9 @@ public class DistrictController {
 
     @GetMapping("/districts/")
     public ResponseEntity<ApiResponse> getDistricts(){
-        return responseConverter.DtoToResponse(converter.DistrictEntityToDto(service.getDistricts()), responseMessage.successfully_found("Districts"), responseMessage.not_found("District"));
+        return responseConverter.DtoToResponse(converter.DistrictEntityToDto(service.getDistricts()),
+                responseMessage.successfully_found("Districts"),
+                responseMessage.not_found("District"));
     }
 
     @GetMapping("/districts/{id}")

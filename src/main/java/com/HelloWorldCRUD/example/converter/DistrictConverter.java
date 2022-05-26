@@ -2,13 +2,10 @@ package com.HelloWorldCRUD.example.converter;
 
 import com.HelloWorldCRUD.example.dto.DistrictDto;
 import com.HelloWorldCRUD.example.entity.District;
-import com.HelloWorldCRUD.example.entity.HttpStatus;
-import com.HelloWorldCRUD.example.util.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Component
