@@ -1,19 +1,15 @@
 package com.HelloWorldCRUD.example.repository;
 
 import com.HelloWorldCRUD.example.entity.User;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,6 +26,8 @@ class UserRepositoryTest {
     @Sql("/db/user1.sql")
     void whenUserIsValid_thenUserShouldPersist(){
 
+        assertEquals(userRepository.findAll().size(), 2);
+
         User user1 = User.builder().
                 id(3L).firstName("S").
                 lastName("H").
@@ -45,7 +43,7 @@ class UserRepositoryTest {
         User user2 = User.builder().
                 id(4L).firstName("H").
                 lastName("R").
-                email("hr64@gmail.com").
+                email("hr645@gmail.com").
                 mobileNo("01518721828").
                 isActive(true).
                 build();
@@ -56,6 +54,7 @@ class UserRepositoryTest {
     }
 
     // get-user
+    @DisplayName("Return user when user id is valid.")
     @Test
     @Sql("/db/user1.sql")
     void whenUserIsFound_thenUserShouldReturn(){
@@ -66,6 +65,7 @@ class UserRepositoryTest {
         assertThat(user.getFirstName()).isEqualTo("S");
     }
 
+    @DisplayName("Return null when user id is invalid. ")
     @Test
     @Sql("/db/user1.sql")
     void whenUserIsNotFound_thenUserShouldNotReturn(){
@@ -74,6 +74,7 @@ class UserRepositoryTest {
     }
 
     // get-all
+    @DisplayName("Return all users successfully.")
     @Test
     @Sql("/db/user1.sql")
     void whenUsersAreFound_thenUsersShouldReturn(){
@@ -89,6 +90,7 @@ class UserRepositoryTest {
         assertThat(userRepository.findAll().contains(user2)).isTrue();
     }
 
+    @DisplayName("Return empty when no user is found. ")
     @Test
     @Sql("/db/user1.sql")
     void whenUserAreNotFound_thenUserShouldReturnNull (){
@@ -96,6 +98,7 @@ class UserRepositoryTest {
         assertThat(userRepository.findAll().isEmpty()).isTrue();
     }
 
+    @DisplayName("Return user when user email is valid. ")
     @Test
     @Sql("/db/user1.sql")
     void whenEmailIsValid_thenUserShouldReturn() {
@@ -106,6 +109,7 @@ class UserRepositoryTest {
         assertThat(user.getId()).isEqualTo(1);
     }
 
+    @DisplayName("Return user when user email is not valid. ")
     @Test
     @Sql("/db/user1.sql")
     void whenEmailIsNotValid_thenUserShouldNotReturn() {
@@ -115,6 +119,7 @@ class UserRepositoryTest {
         assertThat(user).isNull();
     }
 
+    @DisplayName("Return User when user first name is valid.")
     @Test
     @Sql("/db/user1.sql")
     void whenFirstNameIsValid_thenUserShouldReturn() {
@@ -125,6 +130,8 @@ class UserRepositoryTest {
         assertThat(users.size()).isEqualTo(1);
     }
 
+
+    @DisplayName("Return null when user first name is not valid.")
     @Test
     @Sql("/db/user1.sql")
     void whenFirstNameIsNotValid_thenUserShouldNotReturn() {
@@ -136,6 +143,7 @@ class UserRepositoryTest {
         assertThat(users.size()).isEqualTo(0);
     }
 
+    @DisplayName("Return User when user last name is valid.")
     @Test
     @Sql("/db/user1.sql")
     void whenLastNameIsValid_thenUserShouldReturn() {
@@ -146,6 +154,7 @@ class UserRepositoryTest {
         assertThat(users.size()).isEqualTo(1);
     }
 
+    @DisplayName("Return null when user last name is not valid.")
     @Test
     @Sql("/db/user1.sql")
     void whenLastNameIsNotValid_thenUserShouldNotReturn() {
@@ -157,6 +166,7 @@ class UserRepositoryTest {
         assertThat(users.size()).isEqualTo(0);
     }
 
+    @DisplayName("Return all active users successfully.")
     @Test
     @Sql("/db/user1.sql")
     void whenActiveUsersAreFound_thenUsersShouldReturn() {
@@ -166,6 +176,7 @@ class UserRepositoryTest {
         assertThat(users.size()).isEqualTo(1);
     }
 
+    @DisplayName("Return null when no user is active.")
     @Test
     @Sql("/db/user1.sql")
     void whenActiveUserIsNotFound_thenUsersShouldNotReturn() {

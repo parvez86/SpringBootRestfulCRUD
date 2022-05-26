@@ -4,26 +4,16 @@ import com.HelloWorldCRUD.example.converter.ApiResponseConverter;
 import com.HelloWorldCRUD.example.converter.UserConverter;
 import com.HelloWorldCRUD.example.dto.UserDto;
 import com.HelloWorldCRUD.example.entity.User;
-import com.HelloWorldCRUD.example.repository.UserRepository;
 import com.HelloWorldCRUD.example.service.UserServiceImpl;
 import com.HelloWorldCRUD.example.util.ApiResponse;
 import com.HelloWorldCRUD.example.util.ApiResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage.*;
 import javax.validation.Valid;
 
 @RestController
 public class UserController {
-    @Autowired
-    private User user;
-
-    @Autowired
-    private UserRepository repository;
 
     @Autowired
     private UserServiceImpl service;
@@ -80,8 +70,8 @@ public class UserController {
 
     @PutMapping("users/{id}")
     public ResponseEntity<ApiResponse> updateUser(@PathVariable("id") long id,
-                                  @Valid @RequestBody User user){
-    return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.updateUser(user, id)), responseMessage.successfully_updated("users"), responseMessage.not_updated("users"));
+                                  @Valid @RequestBody UserDto userDto){
+    return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.updateUser(converter.UserDtoToEntity(userDto), id)), responseMessage.successfully_updated("users"), responseMessage.not_updated("users"));
     }
 
     @DeleteMapping("/users/{id}")
@@ -91,7 +81,7 @@ public class UserController {
 
     @PutMapping("/users/deactivate/{id}")
     public ResponseEntity<ApiResponse> deactivateUser( @PathVariable("id") long id){
-        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deactivateUser(id)), responseMessage.activated("users"), responseMessage.not_activated("users"));
+        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deactivateUser(id)), responseMessage.deactivated("user"), responseMessage.not_deactivated("user"));
     }
 
     @GetMapping("users/active/")

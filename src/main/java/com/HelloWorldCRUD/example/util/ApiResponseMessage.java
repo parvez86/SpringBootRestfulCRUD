@@ -77,10 +77,10 @@ public class ApiResponseMessage {
     public String entity_validation_error(String class_name){ return class_name+" "+HTTP_400_ENTITY_VALIDATION_ERROR+" occurred.";}
     public String parameters_type_mismatch_error(String class_name){ return class_name+" "+HTTP_400_TYPE_MISMATCH_ERROR+" occurred.";}
     public String missing_servlet_parameters_error(String class_name){ return class_name+" "+HTTP_400_MISSING_SERVLET_PARAMETERS+" occurred.";}
-    public String activated(String class_name){
+    public String deactivated(String class_name){
         return class_name+" "+HTTP_200_DEACTIVATION+".";
     }
-    public String not_activated(String class_name){
+    public String not_deactivated(String class_name){
         return class_name+" "+HTTP_400_DEACTIVATION+".";
     }
     public String message_unreadable_error(String class_name){

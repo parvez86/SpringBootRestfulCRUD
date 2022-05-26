@@ -1,7 +1,7 @@
 package com.HelloWorldCRUD.example.repository;
 
 import com.HelloWorldCRUD.example.entity.District;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,7 @@ class DistrictRepositoryTest {
     private DistrictRepository districtRepository;
 
     // get-district
+    @DisplayName("Return District successfully when district id is valid. ")
     @Test
     @Sql("/db/district1.sql")
     void whenDistrictIdIsValid_thenDistrictShouldReturn(){
@@ -29,6 +30,7 @@ class DistrictRepositoryTest {
         assertThat(district.getName()).isEqualTo("Sirajganj");
     }
 
+    @DisplayName("Return Null when district id is not valid. ")
     @Test
     @Sql("/db/district1.sql")
     void whenDistrictIdIsNotValid_thenDistrictShouldNotReturn(){
@@ -38,6 +40,7 @@ class DistrictRepositoryTest {
     }
 
     // get-all
+    @DisplayName("Return All Districts successfully.")
     @Test
     @Sql("/db/district1.sql")
     void whenDistrictsAreFound_thenDistrictsShouldReturn(){
@@ -47,6 +50,7 @@ class DistrictRepositoryTest {
     }
 
     @Test
+    @DisplayName("Return Empty list when no district is found.")
     @Sql("/db/district1.sql")
     void whenDistrictIsNotFound_thenDistrictShouldNotReturn(){
         districtRepository.deleteAll();

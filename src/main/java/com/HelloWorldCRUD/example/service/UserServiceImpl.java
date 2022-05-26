@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService{
         List<User> users = repository.findByFirstName(fname);
         return (users.isEmpty())?null:users;
     }
-//
+
     public List<User> getUserByLastName(String lname){
         List<User> users = repository.findByLastName(lname);
         return (users.isEmpty())?null:users;
