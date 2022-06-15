@@ -4,12 +4,12 @@ import com.HelloWorldCRUD.example.entity.District;
 import com.HelloWorldCRUD.example.repository.DistrictRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 
-@Component
+@Service
 public class DistrictServiceImpl implements DistrictService{
 
     @Autowired

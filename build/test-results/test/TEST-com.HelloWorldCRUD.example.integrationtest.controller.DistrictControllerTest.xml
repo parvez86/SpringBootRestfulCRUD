@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-15T12:07:47" hostname="Parvez-AES" time="0.218">
+  <properties/>
+  <testcase name="District not successfully deleted." classname="com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest" time="0.218"/>
+  <system-out><![CDATA[18:07:44.539 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+18:07:44.544 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+18:07:44.565 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+18:07:44.572 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest], using SpringBootContextLoader
+18:07:44.575 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]: class path resource [com/HelloWorldCRUD/example/integrationtest/controller/DistrictControllerTest-context.xml] does not exist
+18:07:44.575 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]: class path resource [com/HelloWorldCRUD/example/integrationtest/controller/DistrictControllerTestContext.groovy] does not exist
+18:07:44.575 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:07:44.576 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]: DistrictControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:07:44.607 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]
+18:07:44.640 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/parvez-aes/Shahriar/Project/HelloWorldSB/HelloWorldSB/build/classes/java/main/com/HelloWorldCRUD/example/HelloWorld.class]
+18:07:44.641 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.HelloWorldCRUD.example.HelloWorld for test class com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest
+18:07:44.691 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.HelloWorldCRUD.example.integrationtest.controller.DistrictControllerTest]: using defaults.
+18:07:44.691 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+18:07:44.706 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2364305a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@470a696f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1bc715b8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@292d1c71, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b491fee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3f1c5af9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c55f277, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5ddabb18, org.springframework.test.context.event.EventPublishingTestExecutionListener@3e8f7922, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63192798, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@50eca7c6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58e6d4b8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1de5f0ef, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@376a312c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28d6290]
+18:07:44.709 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2cb3d0f7 testClass = DistrictControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e517165 testClass = DistrictControllerTest, locations = '{}', classes = '{class com.HelloWorldCRUD.example.HelloWorld}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@64bce832, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7331196b, [ImportsContextCustomizer@44e3760b key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6ed3f258, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@19835e64, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6c0d9d86, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2118cddf], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.7)
+
+2022-06-15 18:07:44.975  INFO 69958 --- [    Test worker] c.H.e.i.c.DistrictControllerTest         : Starting DistrictControllerTest using Java 17.0.3.1 on Parvez-AES with PID 69958 (started by parvez-aes in /home/parvez-aes/Shahriar/Project/HelloWorldSB/HelloWorldSB)
+2022-06-15 18:07:44.976  INFO 69958 --- [    Test worker] c.H.e.i.c.DistrictControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2022-06-15 18:07:45.487  INFO 69958 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-15 18:07:45.533  INFO 69958 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2022-06-15 18:07:45.933  INFO 69958 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-15 18:07:45.969  INFO 69958 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-06-15 18:07:46.055  INFO 69958 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-15 18:07:46.115  INFO 69958 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-15 18:07:46.242  INFO 69958 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-15 18:07:46.271  INFO 69958 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-15 18:07:46.638  INFO 69958 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-15 18:07:46.643  INFO 69958 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-15 18:07:47.049  WARN 69958 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-15 18:07:47.393  INFO 69958 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-06-15 18:07:47.393  INFO 69958 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-06-15 18:07:47.394  INFO 69958 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-06-15 18:07:47.407  INFO 69958 --- [    Test worker] c.H.e.i.c.DistrictControllerTest         : Started DistrictControllerTest in 2.586 seconds (JVM running for 3.304)
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /districts/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#deleteDistrict(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District not deleted.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
