@@ -6,15 +6,12 @@ import com.HelloWorldCRUD.example.dto.UserDto;
 import com.HelloWorldCRUD.example.entity.User;
 import com.HelloWorldCRUD.example.repository.UserRepository;
 import com.HelloWorldCRUD.example.service.UserServiceImpl;
-import com.HelloWorldCRUD.example.util.ApiResponse;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage.*;
+
 import javax.validation.Valid;
 
 @RestController
