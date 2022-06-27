@@ -5,10 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@AutoConfigureMockMvc
 class UserControllerTest {
 
+    @Autowired
+    private MockMvc mockMvc;
+
+    private final ObjectMapper objectMapper= new ObjectMapper();
+    private UserDto userDto1, userDto2, userDto3;
     @BeforeEach
     void setUp() {
+
     }
 
     @Test
