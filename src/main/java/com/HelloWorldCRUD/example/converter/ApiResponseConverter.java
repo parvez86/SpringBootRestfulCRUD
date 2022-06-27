@@ -1,7 +1,7 @@
 package com.HelloWorldCRUD.example.converter;
 
 import com.HelloWorldCRUD.example.entity.HttpStatus;
-import com.HelloWorldCRUD.example.util.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

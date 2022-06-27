@@ -1,7 +1,7 @@
 package com.HelloWorldCRUD.example.advice;
 
-import com.HelloWorldCRUD.example.util.ApiResponse;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponseMessage;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

@@ -1,6 +1,8 @@
 package com.HelloWorldCRUD.example.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -9,6 +11,8 @@ import javax.validation.constraints.Size;
 
 @Component
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DistrictDto {
     @NotNull
     @Size(min = 1, max = 20, message = " district name should be not null and less than or equal 20 characters")
