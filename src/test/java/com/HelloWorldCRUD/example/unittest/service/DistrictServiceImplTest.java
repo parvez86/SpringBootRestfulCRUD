@@ -6,8 +6,10 @@ import com.HelloWorldCRUD.example.service.DistrictServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Sort;
 
@@ -19,6 +21,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
 class DistrictServiceImplTest {
 
@@ -128,7 +131,7 @@ class DistrictServiceImplTest {
     @DisplayName("District doesn't successfully updated.")
     void whenDistrictIdIsNotValid_thenShouldNotUpdateDistrict() {
         when(districtRepository.findById(any())).thenReturn(Optional.empty());
-        when(districtRepository.save(any())).thenReturn(district1);  // not reachable for this case
+//        when(districtRepository.save(any())).thenReturn(null);  // not reachable for this case
 
         District district = districtService.updateDistrict(district1, district1.getId());
         assertThat(district).isNull();

@@ -17,7 +17,7 @@ import javax.validation.constraints.Email;
 @AllArgsConstructor
 @Table(name = "users")
 @Builder
-public class User {
+public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

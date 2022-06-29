@@ -1,4 +1,4 @@
-package com.HelloWorldCRUD.example.util;
+package com.HelloWorldCRUD.example.util.response;
 
 import com.HelloWorldCRUD.example.entity.HttpStatus;
 import lombok.Data;

@@ -7,8 +7,8 @@ import com.HelloWorldCRUD.example.dto.UserDto;
 import com.HelloWorldCRUD.example.entity.HttpStatus;
 import com.HelloWorldCRUD.example.entity.User;
 import com.HelloWorldCRUD.example.service.UserServiceImpl;
-import com.HelloWorldCRUD.example.util.ApiResponse;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponseMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -98,7 +98,7 @@ class UserControllerTest {
         assertThat(outputResponse).isNotNull();
         assertThat(outputResponse).isEqualTo(responseEntity);
 
-        ResultActions resultActions = mockMvc.perform(post("/users").
+        ResultActions resultActions = mockMvc.perform(post("/users/").
                 contentType(MediaType.APPLICATION_JSON).
                 content(objectMapper.writeValueAsString(userDto1)));
 
@@ -131,7 +131,7 @@ class UserControllerTest {
         assertThat(outputResponse).isNotNull();
         assertThat(outputResponse).isEqualTo(responseEntity);
 
-        ResultActions resultActions = mockMvc.perform(post("/users").
+        ResultActions resultActions = mockMvc.perform(post("/users/").
                 contentType(MediaType.APPLICATION_JSON).
                 content(objectMapper.writeValueAsString(userDto1)));
 
@@ -161,7 +161,7 @@ class UserControllerTest {
         assertThat(outputResponse).isNotNull();
         assertThat(outputResponse).isEqualTo(responseEntity);
 
-        ResultActions resultActions = mockMvc.perform(get("/users"));
+        ResultActions resultActions = mockMvc.perform(get("/users/"));
 
         resultActions.andDo(print())
                 .andExpect(status().isOk())
@@ -190,7 +190,7 @@ class UserControllerTest {
         assertThat(outputResponse).isNotNull();
         assertThat(outputResponse).isEqualTo(responseEntity);
 
-        ResultActions resultActions = mockMvc.perform(get("/users"));
+        ResultActions resultActions = mockMvc.perform(get("/users/"));
 
         resultActions.andDo(print())
                 .andExpect(status().isBadRequest())
