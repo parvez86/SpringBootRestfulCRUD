@@ -22,6 +22,7 @@ import javax.persistence.EntityNotFoundException;
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @Autowired
     private ApiResponseMessage responseMessage;
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request){
         ApiResponse apiResponse = new ApiResponse();

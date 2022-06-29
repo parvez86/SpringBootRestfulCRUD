@@ -3,10 +3,9 @@ package com.HelloWorldCRUD.example.controller;
 import com.HelloWorldCRUD.example.converter.ApiResponseConverter;
 import com.HelloWorldCRUD.example.converter.UserConverter;
 import com.HelloWorldCRUD.example.dto.UserDto;
-import com.HelloWorldCRUD.example.entity.User;
 import com.HelloWorldCRUD.example.service.UserServiceImpl;
-import com.HelloWorldCRUD.example.util.ApiResponse;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,12 +25,12 @@ public class UserController {
     @Autowired
     private ApiResponseMessage responseMessage;
 
-    @PostMapping("/users")
+    @PostMapping("/users/")
 //    public ResponseEntity<ApiResponse> saveUser(@Valid @RequestBody UserDto userDto, BindingResult bindingResult){
     public ResponseEntity<ApiResponse> saveUser(@Valid @RequestBody UserDto userDto){
 //        if(bindingResult.hasErrors()){
 //            ApiResponse apiResponse = new ApiResponse();
-//            apiResponse.setApiResponse(bindingResult.getFieldError().getField()+": "+bindingResult.getFieldError().getDefaultMessage(), userDto, com.HelloWorldCRUD.example.entity.HttpStatus.ERROR);
+//            apiResponse.setApiResponse(bindingResult.getFieldError().getField()+": "+bindingResult.getFieldError().getDefaultMessage(), userDto, HttpStatus.ERROR);
 //            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(apiResponse);
 //        }
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.saveUser(converter.UserDtoToEntity(userDto))), responseMessage.successfully_created("user"),responseMessage.not_created("user"));
@@ -42,20 +41,20 @@ public class UserController {
 //        return service.saveUsers(users);
 //    }
 
-    @GetMapping("/users")
+    @GetMapping("/users/")
     public ResponseEntity<ApiResponse> getUsers(){
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUsers()),responseMessage.successfully_found("users"),responseMessage.not_found("users"));
     }
 
     @GetMapping("/users/{id}")
     public ResponseEntity<ApiResponse> getUserById(@PathVariable("id") long id){
-        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserById(id)),responseMessage.successfully_found("users"), responseMessage.not_found("users"));
+        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserById(id)),responseMessage.successfully_found("user"), responseMessage.not_found("user"));
     }
 
     @GetMapping("/users/email")
     public ResponseEntity<ApiResponse> getUserByEmail(@RequestParam String email){
         System.out.println(email);
-        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserByEmail(email)), responseMessage.successfully_found("users"), responseMessage.not_found("users"));
+        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserByEmail(email)), responseMessage.successfully_found("user"), responseMessage.not_found("user"));
     }
 
     @GetMapping("/users/fname")

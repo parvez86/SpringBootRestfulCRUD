@@ -27,7 +27,7 @@ public class UserConverter {
     }
 
     public List<UserDto> UserEntityToDTO(List<User> users) {
-        if(users==null) return null;
+        if(users==null || users.isEmpty()) return null;
         return users.stream().map(user -> UserEntityToDTO(user)).collect(Collectors.toList());
     }
 

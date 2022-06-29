@@ -2,12 +2,11 @@ package com.HelloWorldCRUD.example.controller;
 
 
 import com.HelloWorldCRUD.example.converter.ApiResponseConverter;
-import com.HelloWorldCRUD.example.converter.DistrictConverter;
 import com.HelloWorldCRUD.example.dto.DistrictDto;
 import com.HelloWorldCRUD.example.service.DistrictServiceImpl;
-import com.HelloWorldCRUD.example.util.ApiResponse;
-import com.HelloWorldCRUD.example.util.ApiResponseMessage;
-import lombok.RequiredArgsConstructor;
+import com.HelloWorldCRUD.example.util.response.ApiResponse;
+import com.HelloWorldCRUD.example.util.response.ApiResponseMessage;
+import com.HelloWorldCRUD.example.converter.DistrictConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +29,6 @@ public class DistrictController {
 
     @PostMapping("/districts/")
     public ResponseEntity<ApiResponse> saveDistrict(@Valid @RequestBody DistrictDto dto){
-        System.out.println(dto);
         return responseConverter.DtoToResponse(converter.DistrictEntityToDto(service.saveDistrict(converter.DistrictDtoToEntity(dto))), responseMessage.successfully_created("District"), responseMessage.not_created("District"));
     }
 
