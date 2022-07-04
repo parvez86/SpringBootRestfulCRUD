@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2022-07-04T16:50:32" hostname="DESKTOP-7CVTM0J" time="0.216">
+  <properties/>
+  <testcase name="User is successfully deleted." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.097"/>
+  <testcase name="No active user found" classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="User isn't successfully deleted." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="Active Users are successfully found." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User is successfully updated." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="User is successfully found by email." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.007"/>
+  <testcase name="User successfully created." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.008"/>
+  <testcase name="User is successfully deactivated." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.009"/>
+  <testcase name="User isn't successfully updated." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User aren't successfully found." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User are successfully found." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User isn't successfully created by first name." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User is successfully found by last name." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User not successfully created." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.006"/>
+  <testcase name="User is successfully found." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.004"/>
+  <testcase name="User isn't successfully found." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.015"/>
+  <testcase name="User successfully found by first name." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="User isn't successfully found by last name." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.006"/>
+  <testcase name="User isn't successfully found by email." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.002"/>
+  <testcase name="User doesn't successfully deactivated." classname="com.HelloWorldCRUD.example.unittest.service.UserServiceImplTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

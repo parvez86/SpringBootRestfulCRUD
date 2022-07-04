@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2022-07-04T16:50:26" hostname="DESKTOP-7CVTM0J" time="1.68">
+  <properties/>
+  <testcase name="Users aren't successfully found by first name" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.173"/>
+  <testcase name="Users are successfully found by first name" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.107"/>
+  <testcase name="Users are successfully found by last name" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.219"/>
+  <testcase name="Users are successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.067"/>
+  <testcase name="Active users aren't successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.048"/>
+  <testcase name="User is successfully saved." classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.109"/>
+  <testcase name="Users is successfully found  by email" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.051"/>
+  <testcase name="Users aren't successfully found by last name" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.182"/>
+  <testcase name="User is successfully updated" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.101"/>
+  <testcase name="Active users are successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.045"/>
+  <testcase name="User is successfully deactivated" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.045"/>
+  <testcase name="User isn't successfully updated" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.097"/>
+  <testcase name="User is successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.052"/>
+  <testcase name="Users aren't successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.047"/>
+  <testcase name="User isn't successfully found by email" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.029"/>
+  <testcase name="User isn't successfully found" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.032"/>
+  <testcase name="Users is successfully deleted" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.031"/>
+  <testcase name="User isn't successfully deleted" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.05"/>
+  <testcase name="User isn't successfully saved" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.097"/>
+  <testcase name="User isn't successfully deactivated" classname="com.HelloWorldCRUD.example.unittest.controller.UserControllerTest" time="0.069"/>
+  <system-out><![CDATA[2022-07-04 22:50:26.461  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.461  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.461  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/fname
+       Parameters = {fname=[S]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByFirstName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users aren't successfully found by first name.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.545  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.545  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.561  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/fname
+       Parameters = {fname=[S]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByFirstName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users are successfully found by first name.","object":[{"firstName":"S","lastName":"P","email":"sp86@gmail.com"}],"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.759  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.759  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.759  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/lname
+       Parameters = {lname=[P]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByLastName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users are successfully found by last name.","object":[{"firstName":"S","lastName":"P","email":"sp86@gmail.com"}],"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.860  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.860  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.868  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users are successfully found.","object":[{"firstName":"S","lastName":"P","email":"sp86@gmail.com"},{"firstName":"H","lastName":"R","email":"hr86@gmail.com"}],"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.940  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.940  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.940  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/active/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getActiveUser()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Active users aren't successfully found.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.991  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.991  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.991  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"57"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#saveUser(UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully created.","object":{"firstName":"S","lastName":"P","email":"sp86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.103  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.103  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.103  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+hr86@gmail.com
+hr86@gmail.com
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/email
+       Parameters = {email=[hr86@gmail.com]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByEmail(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully found by email.","object":{"firstName":"H","lastName":"R","email":"hr86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.212  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.212  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.212  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/lname
+       Parameters = {lname=[P]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByLastName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users aren't successfully found by last name.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.335  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.335  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.335  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"57"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#updateUser(long, UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully updated.","object":{"firstName":"S","lastName":"P","email":"sp86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.416  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.416  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.416  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/active/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getActiveUser()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Active users are successfully found.","object":[{"firstName":"S","lastName":"P","email":"sp86@gmail.com"}],"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.466  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.466  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.466  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/deactivate/2
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deactivateUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully deactivated.","object":{"firstName":"H","lastName":"R","email":"hr86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.517  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.517  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.517  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/2
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"57"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#updateUser(long, UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully updated.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.628  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.628  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.628  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserById(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully found.","object":{"firstName":"S","lastName":"P","email":"sp86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.687  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.687  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.687  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Users aren't successfully found.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.717  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.717  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.717  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+hr86@gmail.com
+S
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/email
+       Parameters = {email=[S]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByEmail(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully found by email.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.750  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.750  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.750  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/2
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserById(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully found.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.780  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.780  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.780  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /users/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deleteUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User is successfully deleted.","object":{"firstName":"S","lastName":"P","email":"sp86@gmail.com"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.831  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.831  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.831  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /users/2
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deleteUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully deleted.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.871  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.871  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.871  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"57"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#saveUser(UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully created.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:27.962  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:27.962  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:27.962  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/deactivate/2
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deactivateUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"User isn't successfully deactivated.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

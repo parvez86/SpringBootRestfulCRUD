@@ -67,15 +67,15 @@ public class UserController {
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getUserByLastName(lname)),responseMessage.successfully_found("users"), responseMessage.not_found("users"));
     }
 
-    @PutMapping("users/{id}")
+    @PutMapping("/users/{id}")
     public ResponseEntity<ApiResponse> updateUser(@PathVariable("id") long id,
                                   @Valid @RequestBody UserDto userDto){
-    return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.updateUser(converter.UserDtoToEntity(userDto), id)), responseMessage.successfully_updated("users"), responseMessage.not_updated("users"));
+    return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.updateUser(converter.UserDtoToEntity(userDto), id)), responseMessage.successfully_updated("user"), responseMessage.not_updated("user"));
     }
 
     @DeleteMapping("/users/{id}")
     public ResponseEntity<ApiResponse> deleteUser(@PathVariable("id") long id){
-        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deleteUser(id)), responseMessage.successfully_deleted("users"), responseMessage.not_deleted("users"));
+        return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deleteUser(id)), responseMessage.successfully_deleted("user"), responseMessage.not_deleted("user"));
     }
 
     @PutMapping("/users/deactivate/{id}")
@@ -83,7 +83,7 @@ public class UserController {
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.deactivateUser(id)), responseMessage.deactivated("user"), responseMessage.not_deactivated("user"));
     }
 
-    @GetMapping("users/active/")
+    @GetMapping("/users/active/")
     public ResponseEntity<ApiResponse> getActiveUser(){
         return responseConverter.DtoToResponse(converter.UserEntityToDTO(service.getActiveUsers()), responseMessage.successfully_found("users"), responseMessage.not_found("user"));
     }

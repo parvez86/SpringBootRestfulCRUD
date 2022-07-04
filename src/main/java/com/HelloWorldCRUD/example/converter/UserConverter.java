@@ -22,7 +22,6 @@ public class UserConverter {
         userDto.setEmail(user.getEmail());
         userDto.setFirstName(user.getFirstName());
         userDto.setLastName(user.getLastName());
-
         return userDto;
     }
 
@@ -41,7 +40,7 @@ public class UserConverter {
     }
 
     public List<User> UserDtoToEntity(List<UserDto> dtos) {
-        if(dtos.isEmpty()) return null;
+        if(dtos==null || dtos.isEmpty()) return null;
         return dtos.stream().map(dto -> UserDtoToEntity(dto)).collect(Collectors.toList());
     }
 }

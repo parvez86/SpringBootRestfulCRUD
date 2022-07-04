@@ -35,5 +35,5 @@ public class User{
     private String mobileNo;
 
     @Column(nullable = false)
-    private Boolean isActive;
+    private Boolean isActive=true;
 }
