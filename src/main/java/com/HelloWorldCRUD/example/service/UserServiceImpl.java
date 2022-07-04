@@ -75,7 +75,8 @@ public class UserServiceImpl implements UserService{
             if(user.getFirstName() != null) temp_user.setFirstName(user.getFirstName());
             if(user.getLastName() != null) temp_user.setLastName(user.getLastName());
             if(user.getEmail() != null) temp_user.setEmail(user.getEmail());
-            /*if(user.getMobileNo() != null) temp_user.setMobileNo(user.getMobileNo());*/
+            if(user.getMobileNo() != null) temp_user.setMobileNo(user.getMobileNo());
+            temp_user.setIsActive(user.getIsActive());
             return repository.save(temp_user);
         } else return temp_user;
     }

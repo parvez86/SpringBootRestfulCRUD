@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-07-04T16:50:25" hostname="DESKTOP-7CVTM0J" time="1.142">
+  <properties/>
+  <testcase name="Districts aren't successfully found." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.454"/>
+  <testcase name="District is successfully updated" classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.108"/>
+  <testcase name="District successfully saved." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.136"/>
+  <testcase name="District isn't successfully found." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.034"/>
+  <testcase name="District isn't successfully updated." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.032"/>
+  <testcase name="District is successfully deleted." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.025"/>
+  <testcase name="Districts are successfully found." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.065"/>
+  <testcase name="District isn't successfully deleted." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.055"/>
+  <testcase name="District is successfully found." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.1"/>
+  <testcase name="District not successfully saved." classname="com.HelloWorldCRUD.example.unittest.controller.DistrictControllerTest" time="0.123"/>
+  <system-out><![CDATA[2022-07-04 22:50:25.549  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.549  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.549  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /districts/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#getDistricts()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District aren't successfully not found.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.680  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.680  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.680  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /districts/1/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"52"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#updateDistrict(int, DistrictDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District is successfully updated.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.790  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.790  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.792  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /districts/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"52"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#saveDistrict(DistrictDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District successfully created.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.911  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.911  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.911  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /districts/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#getDistrict(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District isn't successfully found.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.933  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.933  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.933  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /districts/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"52"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#updateDistrict(int, DistrictDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District isn't successfully updated.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.971  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.971  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.971  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /districts/1/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#deleteDistrict(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District is successfully deleted.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:25.987  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:25.987  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:25.987  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /districts/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#getDistricts()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"Districts are successfully found.","object":[{"name":"Sirajganj","code":15,"division":"Rajshahi"},{"name":"Narail","code":22,"division":"Zashore"}],"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.078  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.080  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.082  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /districts/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#deleteDistrict(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District isn't successfully deleted.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.160  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.160  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.160  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /districts/1/
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#getDistrict(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District is successfully found.","object":{"name":"Sirajganj","code":15,"division":"Rajshahi"},"status":"SUCCESS","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-07-04 22:50:26.255  INFO 13668 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2022-07-04 22:50:26.263  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-07-04 22:50:26.265  INFO 13668 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /districts/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"52"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.DistrictController
+           Method = com.HelloWorldCRUD.example.controller.DistrictController#saveDistrict(DistrictDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"message":"District successfully not created.","object":null,"status":"ERROR","fieldError":null,"methodError":null,"pathError":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

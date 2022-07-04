@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.967s</div>
+<div class="counter">1.032s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,9 +79,123 @@
 </tr>
 </thead>
 <tr>
+<td class="success">All active users are successfully found</td>
+<td class="success">whenActiveUsersAreFound_thenReturnActiveUsers()</td>
+<td class="success">0.079s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Active users are not found</td>
+<td class="success">whenNoActiveUsersAreFound_thenReturnEmpty()</td>
+<td class="success">0.029s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">User not found by email</td>
 <td class="success">whenUserEmailIsNotValid_thenReturnNull()</td>
-<td class="success">0.967s</td>
+<td class="success">0.039s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully found by email</td>
+<td class="success">whenUserEmailIsValid_thenReturnUser()</td>
+<td class="success">0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users successfully found by first name</td>
+<td class="success">whenUserFirstNameIsInvalid_thenReturnNull()</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users successfully found by first name</td>
+<td class="success">whenUserFirstNameIsValid_thenReturnUser()</td>
+<td class="success">0.051s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User not de-activated</td>
+<td class="success">whenUserIdIsInvalid_thenNotDeactivateUser()</td>
+<td class="success">0.087s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User not deleted</td>
+<td class="success">whenUserIdIsInvalid_thenNotDeleteUser()</td>
+<td class="success">0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User not updated</td>
+<td class="success">whenUserIdIsInvalid_thenNotUpdateUser()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User not saved</td>
+<td class="success">whenUserIdIsNotValid_theNotSaveUser()</td>
+<td class="success">0.068s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User not found by email</td>
+<td class="success">whenUserIdIsNotValid_thenReturnNull()</td>
+<td class="success">0.039s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully de-activated</td>
+<td class="success">whenUserIdIsValid_thenDeactivateUser()</td>
+<td class="success">0.058s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully deleted</td>
+<td class="success">whenUserIdIsValid_thenDeleteUser()</td>
+<td class="success">0.089s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully found</td>
+<td class="success">whenUserIdIsValid_thenReturnUser()</td>
+<td class="success">0.071s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully saved</td>
+<td class="success">whenUserIdIsValid_thenSaveUser()</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User successfully updated</td>
+<td class="success">whenUserIdIsValid_thenUpdateUser()</td>
+<td class="success">0.051s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users not found</td>
+<td class="success">whenUserIsNotFound_thenReturnNull()</td>
+<td class="success">0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users not found by last name</td>
+<td class="success">whenUserLastNameIsInvalid_thenReturnNull()</td>
+<td class="success">0.046s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users successfully found by last name</td>
+<td class="success">whenUserLastNameIsValid_thenReturnUser()</td>
+<td class="success">0.046s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Users are successfully found</td>
+<td class="success">whenUsersAreFound_thenReturnUsers()</td>
+<td class="success">0.055s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,47 +203,642 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>00:13:12.602 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-00:13:12.641 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-00:13:12.719 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-00:13:12.750 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest], using SpringBootContextLoader
-00:13:12.766 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: class path resource [com/HelloWorldCRUD/example/integrationtest/controller/UserControllerTest-context.xml] does not exist
-00:13:12.766 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: class path resource [com/HelloWorldCRUD/example/integrationtest/controller/UserControllerTestContext.groovy] does not exist
-00:13:12.766 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-00:13:12.766 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:13:12.906 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]
-00:13:13.032 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Projects\HelloWorldSB\build\classes\java\main\com\HelloWorldCRUD\example\HelloWorld.class]
-00:13:13.032 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.HelloWorldCRUD.example.HelloWorld for test class com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest
-00:13:13.266 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: using defaults.
-00:13:13.266 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-00:13:13.281 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@303e3593, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4ef27d66, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@362a019c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1d9bec4d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c48c0c0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10c8f62, org.springframework.test.context.transaction.TransactionalTestExecutionListener@674c583e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@25f7391e, org.springframework.test.context.event.EventPublishingTestExecutionListener@3f23a3a0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ab14cb9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fb97279, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@439a8f59, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@61861a29, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@31024624, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25bcd0c7]
-00:13:13.297 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1cb3ec38 testClass = UserControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@403132fc testClass = UserControllerTest, locations = '{}', classes = '{class com.HelloWorldCRUD.example.HelloWorld}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@64b73e7a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d9ac0b4, [ImportsContextCustomizer@71c5b236 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2dca0d64, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@23aa363a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@9ef8eb7, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@429bffaa], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest], using SpringBootContextLoader
+2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.HelloWorldCRUD.example.HelloWorld for test class com.HelloWorldCRUD.example.integrationtest.controller.UserControllerTest
+2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-07-04 22:50:24.031  INFO 13668 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@18f1260, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7672dd7a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1aee0f49, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7a80ebcd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@365eaef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@631c6ef4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@9e2b199, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7441edeb, org.springframework.test.context.event.EventPublishingTestExecutionListener@58df431e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5834fd3f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4446e1d9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f13720f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1df60140, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@62d4dac4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11efa76e]
 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.6.7)
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/deactivate/2
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
 
-2022-06-29 00:13:14.217  INFO 3600 --- [    Test worker] c.H.e.i.controller.UserControllerTest    : Starting UserControllerTest using Java 17.0.2 on DESKTOP-7CVTM0J with PID 3600 (started by Shahriar Parvez in D:\Projects\HelloWorldSB)
-2022-06-29 00:13:14.217  INFO 3600 --- [    Test worker] c.H.e.i.controller.UserControllerTest    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2022-06-29 00:13:16.151  INFO 3600 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-29 00:13:16.291  INFO 3600 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 2 JPA repository interfaces.
-2022-06-29 00:13:17.575  INFO 3600 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-29 00:13:17.704  INFO 3600 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
-2022-06-29 00:13:18.142  INFO 3600 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-29 00:13:18.454  INFO 3600 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-29 00:13:18.798  INFO 3600 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-29 00:13:18.845  INFO 3600 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-06-29 00:13:20.048  INFO 3600 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-29 00:13:20.064  INFO 3600 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-29 00:13:21.700  WARN 3600 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-29 00:13:23.277  INFO 3600 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-06-29 00:13:23.277  INFO 3600 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-06-29 00:13:23.292  INFO 3600 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
-2022-06-29 00:13:23.324  INFO 3600 --- [    Test worker] c.H.e.i.controller.UserControllerTest    : Started UserControllerTest in 9.718 seconds (JVM running for 12.742)
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deactivateUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not deactivated.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/lname
+       Parameters = {lname=[P]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByLastName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users not found.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /users/3
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deleteUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not deleted.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/fname
+       Parameters = {fname=[S]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByFirstName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users successfully found.&quot;,&quot;object&quot;:[{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}],&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/lname
+       Parameters = {lname=[P]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByLastName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users successfully found.&quot;,&quot;object&quot;:[{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}],&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users successfully found.&quot;,&quot;object&quot;:[{&quot;firstName&quot;:&quot;H&quot;,&quot;lastName&quot;:&quot;R&quot;,&quot;email&quot;:&quot;hr86@gmail.com&quot;},{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}],&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users/
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;57&quot;]
+             Body = {&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#saveUser(UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not created.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users not found.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/active/
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getActiveUser()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users successfully found.&quot;,&quot;object&quot;:[{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}],&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+sp86@gmail.com
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/email
+       Parameters = {email=[sp86@gmail.com]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByEmail(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully found.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/10
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;57&quot;]
+             Body = {&quot;firstName&quot;:&quot;H&quot;,&quot;lastName&quot;:&quot;R&quot;,&quot;email&quot;:&quot;hr86@gmail.com&quot;}
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#updateUser(long, UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully updated.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;H&quot;,&quot;lastName&quot;:&quot;R&quot;,&quot;email&quot;:&quot;hr86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users/
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;57&quot;]
+             Body = {&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;}
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#saveUser(UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully created.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/deactivate/12
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deactivateUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully deactivated.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /users/1
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;57&quot;]
+             Body = {&quot;firstName&quot;:&quot;H&quot;,&quot;lastName&quot;:&quot;R&quot;,&quot;email&quot;:&quot;hr86@gmail.com&quot;}
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#updateUser(long, UserDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not updated.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/active/
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getActiveUser()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not found.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/fname
+       Parameters = {fname=[S]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserByFirstName(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;users not found.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/13
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserById(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully found.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
 sp86@gmail.com
 
 MockHttpServletRequest:
@@ -168,6 +877,80 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /users/14
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#deleteUser(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user successfully deleted.&quot;,&quot;object&quot;:{&quot;firstName&quot;:&quot;S&quot;,&quot;lastName&quot;:&quot;P&quot;,&quot;email&quot;:&quot;sp86@gmail.com&quot;},&quot;status&quot;:&quot;SUCCESS&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.HelloWorldCRUD.example.controller.UserController
+           Method = com.HelloWorldCRUD.example.controller.UserController#getUserById(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;message&quot;:&quot;user not found.&quot;,&quot;object&quot;:null,&quot;status&quot;:&quot;ERROR&quot;,&quot;fieldError&quot;:null,&quot;methodError&quot;:null,&quot;pathError&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
 </pre>
 </span>
 </div>
@@ -179,7 +962,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.2</a> at Jun 29, 2022, 12:13:24 AM</p>
+<a href="http://www.gradle.org">Gradle 7.2</a> at Jul 4, 2022, 10:50:33 PM</p>
 </div>
 </div>
 </body>

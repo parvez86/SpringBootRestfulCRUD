@@ -51,7 +51,7 @@ public class DistrictController {
     }
 
     @DeleteMapping("/districts/{id}")
-    public ResponseEntity<ApiResponse> deleteDistrict(@PathVariable ("id") int id){
+    public ResponseEntity<ApiResponse> deleteDistrict(@PathVariable("id") int id){
         return responseConverter.DtoToResponse(converter.DistrictEntityToDto(service.deleteDistrict(id)), responseMessage.successfully_deleted("District"), responseMessage.not_deleted("District"));
     }
 }
